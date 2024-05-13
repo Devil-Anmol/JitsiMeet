@@ -347,6 +347,7 @@ fun FavoritesContent2(application: Application) {
             }) {
                 Text(text = "Get Favourite")
             }
+            Spacer(modifier = Modifier.weight(0.2f))
 
             Button(onClick = { dialogOpen.value = true }) {
                 Text("Add New User")
