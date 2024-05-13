@@ -346,8 +346,6 @@ private fun signInWithFirebase(
     auth.signInWithEmailAndPassword(email, password)
         .addOnCompleteListener(context as Activity) { task ->
             if (task.isSuccessful) {
-                // Login successful, navigate to the next screen
-                // TODO: Implement navigation to the next screen
                 Log.d("login", "signInWithFirebase:success")
                 Toast.makeText(context, "Login successful", Toast.LENGTH_SHORT).show()
                 val intent = Intent(context, LoginActivity::class.java)

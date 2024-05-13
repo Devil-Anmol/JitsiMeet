@@ -7,18 +7,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.google.firebase.Firebase
-import com.google.firebase.auth.auth
-import com.google.firebase.initialize
 import org.jitsi.meet.sdk.JitsiMeet
 import org.jitsi.meet.sdk.JitsiMeetActivity
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions
@@ -32,7 +26,6 @@ import androidx.compose.runtime.getValue
 import org.jitsi.meet.sdk.BroadcastEvent
 import org.jitsi.meet.sdk.BroadcastIntentHelper
 import timber.log.Timber
-import java.io.Serializable
 import java.net.MalformedURLException
 
 class LoginActivity : ComponentActivity() {
@@ -62,7 +55,6 @@ class LoginActivity : ComponentActivity() {
             .setFeatureFlag("welcomepage.enabled", false)
             .build()
         JitsiMeet.setDefaultConferenceOptions(defaultOptions)
-//        val dao = intent.getSerializableExtra("dao") as UserDao
         registerReceiverIfNeeded()
 
 //        registerForBroadcastMessages()
